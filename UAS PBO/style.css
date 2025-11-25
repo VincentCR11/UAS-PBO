@@ -1,0 +1,91 @@
+/* style.css */
+
+/* Gaya untuk seluruh halaman */
+body {
+    display: flex;
+    justify-content: center; /* Menengahkan kalkulator secara horizontal */
+    align-items: center;    /* Menengahkan kalkulator secara vertikal */
+    min-height: 100vh;      /* Tinggi minimum viewport */
+    margin: 0;
+    background-color: #f0f0f0; /* Warna latar belakang halaman */
+    font-family: Arial, sans-serif;
+}
+
+/* Gaya untuk wadah utama kalkulator */
+.calculator {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Latar belakang putih */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk layar (input) */
+#display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 2em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam width */
+}
+
+/* Gaya untuk wadah tombol */
+.buttons {
+    display: grid;
+    /* Membuat grid dengan 4 kolom berukuran sama */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; /* Jarak antar tombol */
+}
+
+/* Gaya dasar untuk semua tombol */
+.btn {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: background-color 0.1s;
+}
+
+/* Hover effect untuk tombol */
+.btn:hover {
+    background-color: #d0d0d0;
+}
+
+/* Gaya spesifik untuk tombol operator (+, -, x, / dan trigonometri) */
+.operator {
+    background-color: #f7922d; /* Warna oranye/kuning untuk operator */
+    color: white;
+}
+
+.operator:hover {
+    background-color: #e5821d;
+}
+
+/* Gaya spesifik untuk tombol Reset/Clear */
+.clear {
+    /* Membuat tombol clear menempati 2 kolom di baris terakhir */
+    grid-column: span 2; 
+    background-color: #dc3545; /* Warna merah untuk reset */
+    color: white;
+}
+
+.clear:hover {
+    background-color: #c82333;
+}
+
+/* Gaya spesifik untuk tombol Sama Dengan (=) */
+.equal {
+    /* Membuat tombol sama dengan menempati 2 kolom di baris terakhir */
+    grid-column: span 2;
+    background-color: #28a745; /* Warna hijau untuk sama dengan */
+}
+
+.equal:hover {
+    background-color: #1e7e34;
+}
